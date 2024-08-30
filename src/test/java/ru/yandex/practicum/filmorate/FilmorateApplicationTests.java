@@ -2,6 +2,7 @@ package ru.yandex.practicum.filmorate;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.yandex.practicum.filmorate.controller.FilmController;
@@ -18,8 +19,8 @@ class FilmorateApplicationTests {
 	static Film film;
 	User user;
 
-	@BeforeAll
-    static void prepare() {
+	@BeforeEach
+	void prepare() {
 		film = new Film();
 		film.setName("Name");
 		film.setDuration(90);
